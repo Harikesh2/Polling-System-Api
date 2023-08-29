@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Connect to the MongoDB database using mongoose.connect() method and specify the database URL and options
-mongoose.connect('mongodb+srv://mths83478:nNJVH4FNEm0UMfkp@cluster0.3zb9yaa.mongodb.net/?retryWrites=true&w=majority', 
+mongoose.connect('mongodb+srv://mths83478:L6SqnueNqzaIIP2r@cluster0.ypojp36.mongodb.net/?retryWrites=true&w=majority', 
 { 
 useNewUrlParser: true,
 useUnifiedTopology: true,
