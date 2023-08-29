@@ -3,7 +3,9 @@ This is a backend API for a polling system application. It is built using Node.j
 
 # Installation
 Clone the repository using git clone https://github.com/Harikesh2/Polling-System-Api
+
 Install dependencies using npm install
+
 Start the server using npm start
 
 # Features
