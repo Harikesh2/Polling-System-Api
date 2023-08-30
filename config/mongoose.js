@@ -1,11 +1,8 @@
 const mongoose = require('mongoose');
 
 // Connect to the MongoDB database using mongoose.connect() method and specify the database URL and options
-mongoose.connect('mongodb://127.0.0.1/Polling-System-Api', 
-{ 
-useNewUrlParser: true,
-useUnifiedTopology: true,
-});
+ mongoose.connect('mongodb://127.0.0.1:27017/Polling-System-Api' 
+);
 
 
 
