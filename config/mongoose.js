@@ -1,18 +1,25 @@
-
 const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://mths83478:nNJVH4FNEm0UMfkp@cluster0.3zb9yaa.mongodb.net/?retryWrites=true&w=majority';
+// Connect to the MongoDB database using mongoose.connect() method and specify the database URL and options
+mongoose.connect('mongodb+srv://karan:karan@cluster0.gfuxd.mongodb.net/?retryWrites=true&w=majority', 
+{ 
+useNewUrlParser: true,
+useUnifiedTopology: true,
+}
+);
 
-mongoose.connect(uri)//it establishes a connection to the MongoDB server and returns a promise. If connection is successful, promise
- //will resolve.If there is an error during the connection process, the promise will be rejected.
-     .catch((err) => console.log("connection " + err));
+// Store the default connection in a variable named db
+const db = mongoose.connection;
 
-const db = mongoose.connection;//mongoose.connection object serves as the interface through which you can interact with the MongoDB database connection,
-// perform operations, and handle events related to the connection.
+// Listen for any errors that may occur in the database connection and log them to the console
+db.on('error', (error) => {
+    console.error('MongoDB connection error:', error);
+  });
 
-db.on('error', console.error.bind(console, "Error connecting to MongoDB Atlas"));
+// Once the connection is established, log a message to the console indicating the successful connection
+db.once('open', () => {
+    console.log('MongoDB connected');
+  });
 
-
-db.once('open', function () {
-     console.log('Connected to Database :: MongoDB Atlas');
-});
+// Export the db object for use in other files
+module.exports = db;
