@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://kapishverma:MAUEQf9oUOqHESe1@hospital-api.insqejc.mongodb.net/hospital-API?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://mths83478:nNJVH4FNEm0UMfkp@cluster0.3zb9yaa.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(uri)//it establishes a connection to the MongoDB server and returns a promise. If connection is successful, promise
  //will resolve.If there is an error during the connection process, the promise will be rejected.
